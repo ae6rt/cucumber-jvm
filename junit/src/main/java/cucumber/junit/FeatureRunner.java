@@ -62,6 +62,7 @@ class FeatureRunner extends ParentRunner<ParentRunner> {
 
     @Override
     protected void runChild(ParentRunner child, RunNotifier notifier) {
+        System.out.println("    >>> " + child.getDescription());
         child.run(notifier);
     }
 

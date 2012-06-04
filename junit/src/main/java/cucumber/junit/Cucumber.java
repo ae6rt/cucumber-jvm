@@ -73,6 +73,7 @@ public class Cucumber extends ParentRunner<FeatureRunner> {
 
     @Override
     protected void runChild(FeatureRunner child, RunNotifier notifier) {
+        System.out.println(">>> " + child.getDescription());
         child.run(notifier);
     }
 

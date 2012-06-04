@@ -41,6 +41,7 @@ public class StepContainer {
     }
 
     public void runStep(Step step, Reporter reporter, Runtime runtime) {
+        System.out.println("        >>> " + step.getKeyword() + step.getName());
         runtime.runStep(cucumberFeature.getUri(), step, reporter, cucumberFeature.getI18n());
     }
 }
