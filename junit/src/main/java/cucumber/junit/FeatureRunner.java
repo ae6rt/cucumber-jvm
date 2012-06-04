@@ -68,6 +68,7 @@ class FeatureRunner extends ParentRunner<ParentRunner> {
 
     @Override
     public void run(RunNotifier notifier) {
+        System.out.println(">>> " + getDescription().toString().trim() + "  (URI:" + cucumberFeature.getUri() + ")");
         jUnitReporter.uri(cucumberFeature.getUri());
         jUnitReporter.feature(cucumberFeature.getFeature());
         super.run(notifier);
